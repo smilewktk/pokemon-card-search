@@ -5,9 +5,9 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'ポケモンカード検索 - 全カード検索＆デッキレシピ',
-  description: 'ポケモンカードの全カード検索、デッキレシピ作成・共有ができるサイト。画像からデッキを自動認識する機能も搭載。',
-  keywords: 'ポケモンカード, ポケカ, デッキレシピ, カード検索',
+  title: 'TCG検索 - トレーディングカード検索＆デッキ管理',
+  description: 'あらゆるトレーディングカードゲーム（TCG）の検索、デッキレシピ作成・共有ができるサイト。画像認識機能も搭載。',
+  keywords: 'TCG, トレーディングカードゲーム, デッキレシピ, カード検索, ポケモン, 遊戯王, マジックザギャザリング, MTG',
 }
 
 export default function RootLayout({
@@ -22,7 +22,7 @@ export default function RootLayout({
           {children}
         </div>
         <footer className="bg-gray-800 text-white py-4 text-center text-sm">
-          <p>©Pokémon. ©Nintendo/Creatures Inc./GAME FREAK inc.</p>
+          <p>対応TCG: ポケモン、遊戯王、MTG、その他多数</p>
         </footer>
       </body>
     </html>

@@ -8,10 +8,10 @@ export default function Home() {
       <div className="container mx-auto px-4 py-8">
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            ポケモンカード検索
+            TCG検索
           </h1>
           <p className="text-lg text-gray-600 mb-8">
-            全カード検索・デッキレシピ作成・画像認識機能を搭載
+            あらゆるトレーディングカードゲームの検索・デッキ管理・画像認識
           </p>
           <SearchBar />
         </div>
@@ -21,7 +21,7 @@ export default function Home() {
             <div className="text-3xl mb-4">🔍</div>
             <h3 className="text-xl font-semibold mb-2">カード検索</h3>
             <p className="text-gray-600">
-              全ポケモンカードから詳細検索が可能
+              ポケモン・遊戯王・MTGなど全TCGから詳細検索
             </p>
           </div>
           

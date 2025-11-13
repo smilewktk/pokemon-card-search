@@ -1,12 +1,15 @@
 {
-  "name": "pokemon-card-search",
+  "name": "trading-card-search",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -H 0.0.0.0 -p 8080",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "init-db": "tsx scripts/init-db.ts",
+    "seed": "tsx scripts/seed-data.ts",
+    "seed-multi": "tsx scripts/seed-multi-game.ts"
   },
   "dependencies": {
     "@libsql/client": "^0.14.0",
@@ -25,6 +28,8 @@
     "eslint-config-next": "^14.2.25",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "tsx": "^4.19.0",
+    "typescript": "^5",
+    "dotenv": "^16.0.0"
   }
 }

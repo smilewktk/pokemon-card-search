@@ -11,6 +11,8 @@ export default function SearchBar() {
     e.preventDefault()
     if (searchQuery.trim()) {
       router.push(`/cards?q=${encodeURIComponent(searchQuery.trim())}`)
+    } else {
+      router.push('/cards')
     }
   }
 
@@ -21,7 +23,7 @@ export default function SearchBar() {
           type="text"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          placeholder="カード名を入力してください（例: ピカチュウ、リザードン）"
+          placeholder="カード名を入力してください（例: ピカチュウ、ブルーアイズ、ライトニングボルト）"
           className="w-full px-4 py-3 pr-12 text-lg border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
         />
         <button

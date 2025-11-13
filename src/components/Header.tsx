@@ -11,8 +11,8 @@ export default function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center space-x-2">
-            <div className="text-2xl">⚡</div>
-            <span className="text-xl font-bold text-primary">ポケカ検索</span>
+            <div className="text-2xl">🃏</div>
+            <span className="text-xl font-bold text-primary">TCG検索</span>
           </Link>
 
           <nav className="hidden md:flex items-center space-x-8">
