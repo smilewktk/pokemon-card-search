@@ -13,8 +13,15 @@ export interface Card {
   hp?: number
   rarity: string
   format?: string
+  regulation?: string
   image_url?: string
   image_url_large?: string
+  retreat_cost?: number
+  weakness_type?: string
+  weakness_value?: string
+  resistance_type?: string
+  resistance_value?: string
+  attacks?: string
   abilities?: string
   effect?: string
   flavor_text?: string
