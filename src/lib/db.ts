@@ -1,17 +1,18 @@
 import { createClient } from '@libsql/client'
 
-if (!process.env.TURSO_DB_URL) {
+// ビルド時はエラーを投げない
+if (!process.env.TURSO_DB_URL && process.env.NODE_ENV === 'production') {
   throw new Error('TURSO_DB_URL is not set')
 }
 
-if (!process.env.TURSO_AUTH_TOKEN) {
+if (!process.env.TURSO_AUTH_TOKEN && process.env.NODE_ENV === 'production') {
   throw new Error('TURSO_AUTH_TOKEN is not set')
 }
 
-export const turso = createClient({
+export const turso = process.env.TURSO_DB_URL ? createClient({
   url: process.env.TURSO_DB_URL,
-  authToken: process.env.TURSO_AUTH_TOKEN,
-})
+  authToken: process.env.TURSO_AUTH_TOKEN!,
+}) : null
 
 export async function initializeDatabase() {
   console.log('Initializing database...')

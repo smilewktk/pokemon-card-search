@@ -4,6 +4,11 @@ import { CardMeta, SearchFilters, GameType } from '@/types/cards'
 export class CardService {
   // カード検索（共通メタ情報）
   static async searchCards(filters: SearchFilters = {}): Promise<CardMeta[]> {
+    // ビルド時やDB未設定時は空配列を返す
+    if (!turso) {
+      return []
+    }
+
     let sql = `
       SELECT * FROM cards_meta 
       WHERE 1=1
