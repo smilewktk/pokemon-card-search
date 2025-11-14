@@ -63,6 +63,10 @@ export class CardService {
 
   // 特定カードの詳細取得
   static async getCardDetail(id: string): Promise<any> {
+    if (!turso) {
+      return null
+    }
+    
     // まずメタ情報を取得
     const metaResult = await turso.execute({
       sql: 'SELECT * FROM cards_meta WHERE id = ?',
@@ -118,6 +122,10 @@ export class CardService {
     const options: any = {
       rarities: [],
       expansions: []
+    }
+
+    if (!turso) {
+      return options
     }
 
     // レアリティ一覧

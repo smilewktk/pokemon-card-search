@@ -15,6 +15,11 @@ export const turso = process.env.TURSO_DB_URL ? createClient({
 }) : null
 
 export async function initializeDatabase() {
+  if (!turso) {
+    console.log('Database client not available')
+    return
+  }
+  
   console.log('Initializing database...')
   
   // 共通メタテーブル作成
